@@ -19,7 +19,9 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
-    steps:
+    steps:      
+      - checkout: self
+      - script: echo "Puxando atualizações do GitHub"
     - task: Docker@2
       displayName: Build an image
       inputs:
